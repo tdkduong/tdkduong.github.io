@@ -1,0 +1,31 @@
+#leftSidebar {
+    background-color: cyan;
+    border-right: 1px solid black;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 👈 push bottom content down */
+    /* padding: 10px; */
+    /* box-sizing: border-box; */
+}
+
+.sidebar-box-top {
+    text-align: center;
+    color: black;
+    padding: 15px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.sidebar-box-bot {
+    color: black;
+    padding: 15px;
+    border-top: 1px solid black;
+    cursor: pointer;
+}
