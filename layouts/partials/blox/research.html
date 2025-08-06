@@ -1,0 +1,26 @@
+{{/* Hugo Blox: Markdown */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $topic := $block.content.topic | emojify | $page.RenderString }}
+{{ $description := $block.content.description | emojify | $page.RenderString | safeHTML }}
+
+<div class="flex flex-col md:flex-row gap-8 w-full max-w-5xl mx-auto px-4">
+  {{ with $topic }}
+  <div class="md:w-1/4">
+    <div class="sticky top-24 text-3xl font-bold text-gray-900 dark:text-white">
+      {{ . }}
+    </div>
+  </div>
+  {{ end }}
+  <div class="{{ if $topic }}md:w-3/4{{ else }}w-full{{ end }}">
+    <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+      {{ with $description }}
+        {{ . }}
+      {{ end }}
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@
 title: tdkduong.xyz
 # Website URL
 baseURL: 'https://tdkduong.github.io/'
-
+icon: 'favicon.svg'
 ############################
 ## LANGUAGE
 ############################

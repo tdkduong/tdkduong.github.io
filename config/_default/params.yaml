@@ -12,27 +12,28 @@ appearance:
 marketing:
   seo:
     site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    local_business_type: ""
+    org_name: ""
+    description: ""
+    twitter: ""
   analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    plausible: ''
-    fathom: ''
-    pirsch: ''
+    google_analytics: ""
+    baidu_tongji: ""
+    plausible: ""
+    fathom: ""
+    pirsch: ""
   verification:
-    google: ''
-    baidu: ''
+    google: ""
+    baidu: ""
 
 # Site header
 header:
   navbar:
+    align: "right"
     enable: true
     blox: "navbar"
     fixed_to_top: true
-    show_search: true
+    show_search: false
     show_theme_chooser: true
     logo:
       text: "tdkduong"
@@ -40,7 +41,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} tdkduong. This work is licensed under {license}'
+    notice: "© {year} tdkduong. This work is licensed under {license}"
     license:
       enable: true
       allow_derivatives: false
@@ -49,8 +50,8 @@ footer:
 
 # Localization
 locale:
-  date_format: 'Jan 02, 2006'
-  time_format: '03:04 PM'
+  date_format: "Jan 02, 2006"
+  time_format: "03:04 PM"
 
 # Site features
 features:
