@@ -3,11 +3,10 @@ $block.content.headline | emojify | $page.RenderString | safeHTML}} {{ $title :=
 $block.content.title | emojify | $page.RenderString | safeHTML}} {{ $description
 := $block.content.description | emojify | $page.RenderString | safeHTML }}
 
-<div class="w-full max-w-7xl mx-auto px-4 py-0">
+<div class="w-full max-w-7xl mx-auto px-4 py-4">
   <div class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-    {{ with $headline }}{{ . }} {{ end }}
+    {{ with $headline }}{{ . }}{{ end }}
   </div>
-
   <div class="text-xl font-semibold text-gray-900 dark:text-white">
     {{ with $title }}{{ . }}{{ end }}
   </div>

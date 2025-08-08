@@ -8,10 +8,10 @@ main:
     url: /
     weight: 1
   - name: Research
-    url: /research
+    url: research/
     weight: 2
-  - name: Post
-    url: post/
+  - name: Writing
+    url: writing/
     weight: 3
   - name: Experience
     url: experience/
