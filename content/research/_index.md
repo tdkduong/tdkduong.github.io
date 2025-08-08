@@ -4,7 +4,7 @@ title: Research Interests
 type: landing
 
 design:
-  spacing: "1rem"
+  spacing: "0rem"
 
 sections:
   - block: research

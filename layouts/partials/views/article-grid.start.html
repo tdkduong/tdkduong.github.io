@@ -1,5 +1,3 @@
 {{ $columns := .config.columns | default 1 }}
 {{ $len := .config.len | default 2 }}
 {{/* NOTE: dynamic `md:grid-cols-{{$columns}}` class requires Tailwind exception */}}
-<div class="container mx-auto px-4 py-4 w-full max-w-7xl">
-  <div class="grid gap-10 md:grid-cols-{{$columns}} lg:gap-10">
