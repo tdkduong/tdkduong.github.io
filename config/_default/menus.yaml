@@ -13,8 +13,8 @@ main:
   - name: Writing
     url: writing/
     weight: 3
-  - name: Experience
-    url: experience/
+  - name: Note
+    url: note/
     weight: 4
   - name: Teaching
     url: teaching/
