@@ -6,7 +6,7 @@
 # Website name
 title: tdkduong.xyz
 # Website URL
-baseURL: ""
+baseURL: "tdkduong.github.io"
 icon: "favicon.svg"
 ############################
 ## LANGUAGE

@@ -10,42 +10,47 @@
   {{ $link = $item.Params.external_link }}
   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
 {{ end }}
-<div class="w-full max-w-7xl mx-auto px-4 py-4">
-  <div class="">
-    <div class="">
-      <div class="text-xl font-semibold text-gray-900 dark:text-white"><a
-        href="{{ $link }}" {{ $target | safeHTMLAttr }}><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">
-           {{- $item.Title -}}
-           {{if $target}}{{ partial "functions/get_icon" (dict "name" "arrow-top-right-on-square" "attributes" "style=\"height: 1em;\" class=\"inline-flex h-6 w-6 pl-2\"")  }}{{end}}
-          </span></a>
-        </div>
-      <!--          </div>-->
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="{{ $link }}" {{ $target | safeHTMLAttr }}>
-        {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
-      </a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          <!--          <a href="">-->
-          {{ if $item.Params.authors }}
-          <div class="flex items-center gap-3">
+<div class="w-full max-w-5xl mx-auto px-4 py-4">
+  <div class="flex flex-col gap-y-4"> <!-- parent flex column with vertical gap -->
+
+    <!-- Title -->
+    <div class="text-xl font-semibold text-gray-900 dark:text-white">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
+        <span class="transition-colors duration-300 hover:text-primary-500 dark:hover:text-primary-400">
+          {{- $item.Title -}}
+          {{ if $target }}
+            {{ partial "functions/get_icon" (dict "name" "arrow-top-right-on-square" "attributes" "style=\"height: 1em;\" class=\"inline-flex h-6 w-6 pl-2\"") }}
+          {{ end }}
+        </span>
+      </a>
+    </div>
+
+    <!-- Summary -->
+    <div class="grow">
+      <p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
+          {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
+        </a>
+      </p>
+    </div>
+
+    <!-- Author + Date -->
+    <div class="flex-none">
+      <div class="mt-3 flex flex-col gap-1 text-gray-500 dark:text-gray-400 cursor-default">
+        {{ if $item.Params.authors }}
+          <div>
             {{ range $index, $value := first 1 ($item.GetTerms "authors") }}
-            
-            <span class="truncate text-sm">
+              <span class="truncate text-sm">
                 {{- .Page.LinkTitle -}}
               </span>
+            {{ end }}
           </div>
-          {{end}}
-          <!--          </a>-->
-          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
-          {{end}}
-          <time class="truncate text-sm" datetime="{{ time.Format "2006-01-02" $item.Date }}">
+        {{ end }}
+        <time class="truncate text-sm" datetime="{{ time.Format "2006-01-02" $item.Date }}">
           {{- $item.Date | time.Format (site.Params.locale.date_format | default ":date_long") -}}
-          </time>
-        </div>
+        </time>
       </div>
     </div>
+
   </div>
 </div>

@@ -9,9 +9,9 @@ design:
 sections:
   - block: research
     content:
-      headline: research headline
-      title: headline overview
-      description: description of thing with headline
+      headline: Research Interests
+      title: Overview
+      description: Description of Research Interests Overview go here
   - block: research
     content:
       title: overview
