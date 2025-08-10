@@ -41,11 +41,11 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: "© {year} tdkduong. This work is licensed under {license}"
+    notice: "© {year} tdkduong."
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
 
 # Localization
@@ -56,6 +56,6 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
-    enable: false
+    enable: true
