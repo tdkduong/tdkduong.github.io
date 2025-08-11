@@ -1,5 +1,5 @@
 ---
-title: Note
+title: Code
 cms_exclude: true
 
 # View.

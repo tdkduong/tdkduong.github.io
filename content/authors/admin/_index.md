@@ -11,7 +11,7 @@ last_name: Tran
 
 # Status emoji
 status:
-  icon: ☕️
+  icon:
 
 # Is this the primary user of the site?
 superuser: true
@@ -49,7 +49,7 @@ interests:
 
 education:
   - area: B.S in Computer Science
-    additional: Mathematics
+    additional: Advanced Mathematics
     institution: Michigan State University
     year: 2025
 ---
