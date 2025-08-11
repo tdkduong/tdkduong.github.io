@@ -56,4 +56,4 @@ education:
 
 ## Bio
 
-Bio go here
+I am a recent graduate student of Michigan State University with a Bachelor's Degree in Computer Science and Advanced Mathematics. I am currently seeking a PhD in Mathematics. My research interest lies in Graph Theory and Enumerative Combinatorics. I am also interested in Theoretical Computer Science, mainly in Data Structure & Algorithm, since I love Competitive Programming.
