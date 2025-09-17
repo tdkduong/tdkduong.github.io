@@ -1,0 +1,23 @@
+/* Default text everywhere = Crimson Pro */
+body {
+    font-family: "Crimson Pro", serif;
+}
+
+/* Headings also Crimson Pro */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Crimson Pro", serif;
+}
+
+/* Code, pre, keyboard, etc. = Inconsolata */
+code,
+pre,
+kbd,
+samp,
+tt {
+    font-family: "Inconsolata", monospace !important;
+}
