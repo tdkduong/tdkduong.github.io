@@ -6,19 +6,13 @@
 main:
   - name: Home
     url: /
-    weight: 1
-  - name: Research
-    url: research/
-    weight: 2
+    weight: 100
   - name: Writing
     url: writing/
-    weight: 3
+    weight: 200
   - name: Note
     url: note/
-    weight: 4
+    weight: 300
   - name: Code
     url: code/
-    weight: 5
-  - name: Teaching
-    url: teaching/
-    weight: 6
+    weight: 400
