@@ -1,6 +1,6 @@
-\public
-\resources
-\.backup
+public/
+resources/
+.backup/
 .hugo_build.lock
 hugo_stats.json
 go.sum
