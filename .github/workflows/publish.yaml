@@ -2,6 +2,8 @@ name: Deploy website to GitHub Pages
 
 env:
   WC_HUGO_VERSION: "0.152.2"
+  # Make Hugo actually use the cachedir we cache below
+  HUGO_CACHEDIR: /tmp/hugo_cache_runner/
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -31,28 +33,57 @@ jobs:
         with:
           # Fetch history for Hugo's .GitInfo and .Lastmod
           fetch-depth: 0
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${{ env.WC_HUGO_VERSION }}
           extended: true
-      - uses: actions/cache@v4
+
+      - name: Cache Hugo modules and resources
+        uses: actions/cache@v4
         with:
           path: /tmp/hugo_cache_runner/
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      # Compute a robust BASE_URL even on first run when base_url may be empty.
+      # Detects User/Org Pages vs Project Pages automatically.
+      - name: Compute BASE_URL
+        run: |
+          if [ -n "${{ steps.pages.outputs.base_url }}" ]; then
+            echo "BASE_URL=${{ steps.pages.outputs.base_url }}/" >> "$GITHUB_ENV"
+          else
+            if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
+              # User/Org Pages
+              echo "BASE_URL=https://${{ github.repository_owner }}.github.io/" >> "$GITHUB_ENV"
+            else
+              # Project Pages
+              echo "BASE_URL=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" >> "$GITHUB_ENV"
+            fi
+          fi
+          echo "Using BASE_URL=$(grep BASE_URL $GITHUB_ENV | cut -d= -f2)"
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
         run: |
-          echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          echo "Hugo Cache Dir: $(hugo config | grep cachedir || true)"
+          hugo --minify --baseURL "${BASE_URL}"
+
+      - name: Setup Node (for Pagefind)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Generate Pagefind search index
         run: npx pagefind --source "public"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
