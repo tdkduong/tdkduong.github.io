@@ -18,7 +18,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   # Build website
@@ -67,6 +67,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Wait for artifact to be available
+        run: sleep 10 # Wait for 10 seconds (adjust as needed, 5-15s is usually enough)
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
