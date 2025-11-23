@@ -19,10 +19,10 @@ publication_types: ["expository article"]
 publication: ""
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Developed under the mentorship of Prof. Leonid Chekhov over several months, this expository work provides a rigorous examination of the Kontsevich Matrix Model (KMM) and its role in unifying 2D quantum gravity, integrable systems, and the topology of moduli spaces. The article details the proof of the Witten-Kontsevich theorem, establishing the partition function as the generating function for intersection numbers on the moduli space of stable curves. It further demonstrates the model's integrable structure as a tau-function of the KdV hierarchy and derives the Virasoro constraints—specifically the string equation—directly from the Schwinger-Dyson equations. The work concludes by analyzing the double-scaling limit that connects discrete Hermitian matrix models to the continuum KMM.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary:
 
 tags:
   - Expository Article
@@ -31,7 +31,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: "/content/note/random-matrix-model-ra/random-matrix-model.pdf"
+url_pdf: "/note/random-matrix-model-ra/random-matrix-model.pdf"
 url_code: ""
 url_dataset: ""
 url_poster: ""
@@ -62,12 +62,12 @@ projects: []
 slides: example
 ---
 
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
+### Project Description: The Kontsevich Matrix Model and Virasoro Constraints
 
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}}
+This expository article provides a rigorous examination of the **Kontsevich Matrix Model (KMM)**, detailing its central role in unifying two-dimensional (2D) quantum gravity, integrable systems, and the topology of moduli spaces. The work synthesizes three major mathematical perspectives on the KMM:
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+- **Intersection Theory:** It details the proof of the **Witten-Kontsevich theorem**, establishing the KMM partition function as the generating function for intersection numbers of $\psi$-classes on the moduli space of stable curves, $\overline{\mathcal{M}}_{g,n}$. This is demonstrated through a combinatorial identity equating Feynman ribbon graph expansions to the Laplace transform of Kontsevich-Strebel volumes.
+- **Integrable Systems:** The note establishes the KMM partition function as a unique $\tau$-function of the **KdV hierarchy** (a $p=2$ reduction of the KP hierarchy). It utilizes the Miwa transformation to relate the external matrix field to the time variables of the hierarchy.
+- **Virasoro Constraints:** It derives the Virasoro constraints directly from the **Schwinger-Dyson equations** (loop equations) of the matrix integral. Special attention is given to the $\mathcal{L}_{-1}$ constraint, known as the **String Equation**, which uniquely specifies the KMM solution.
+
+Additionally, the article explores the "Double-Scaling Limit," showing how the discrete Hermitian 1-Matrix Model flows into the continuous KMM, and discusses the Kontsevich-Penner Model's role in computing the virtual Euler characteristics of discretized moduli spaces.
