@@ -19,7 +19,7 @@ publication_types: ["expository article"]
 publication: ""
 publication_short: ""
 
-abstract: This project investigates the theory of q-analogues in enumerative combinatorics, focusing on the deformation of classical integer sequences into polynomial generating functions. Key topics include the combinatorial interpretations of Gaussian coefficients, the structural properties of q-Stirling numbers of the first and second kinds, and the p-adic integral representation of Carlitz's q-Bernoulli numbers. The study further covers q-Fibonacci numbers defined by pattern-avoiding partitions and extends the q-Stirling framework to the Coxeter group of Type B (hyperoctahedral group), establishing identities related to elementary and homogeneous symmetric polynomials. This work was conducted under the mentorship of Prof. Peter Magyar.
+abstract: Written under the supervision of Prof. Peter Magyar over several months, this expository paper explores the combinatorial and algebraic foundations of q-analogues. The work systematically "quantizes" classical combinatorial numbers, validating the Gaussian (q-binomial) coefficients through vector space and lattice path interpretations. It extends this framework to q-Stirling numbers (Types A and B) and Carlitz's q-Bernoulli numbers, proving the fundamental q-Bernoulli-Stirling relation via p-adic integrals. The paper also examines q-Fibonacci numbers through the lens of layered matchings and pattern avoidance, concluding with an analysis of Type B q-Stirling numbers and their connection to symmetric polynomials.
 
 # Summary. An optional shortened abstract.
 summary:
