@@ -1,40 +1,40 @@
 ---
-title: "An example journal article"
+title: "Fundamental about Ramsey Numbers, Ramsey Theory
+and Their Combinatorial Significance"
 authors:
   - admin
-  - Robert Ford
 author_notes:
   - "Equal contribution"
-  - "Equal contribution"
-date: "2015-09-01T00:00:00Z"
+date: "2024-12-15T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2025-08-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article-journal"]
+publication_types: ["undergraduate thesis"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
+publication: ""
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Completed under the supervision of Prof. Leonid Chekhov, this undergraduate thesis provides a rigorous survey of Ramsey Theory, focusing on the interplay between order and disorder in graph structures. The work establishes fundamental results, including the proof of Ramsey’s Theorem and the Erdős-Szekeres bound. It presents detailed proofs for exact Ramsey numbers—specifically $R(3,3)$, $R(3,4)$, $R(3,5)$, and $R(4,4)$—by combining recursive upper bounds with explicit graph constructions (lower bounds). Furthermore, the thesis explores the probabilistic method for establishing asymptotic lower bounds and analyzes multicolor Ramsey numbers, including the proof for $R_3(3,3,3)=17$.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary:
 
 tags:
-  - Source Themes
-featured: false
+  - Expository Article
+  - Undergraduate Thesis
+featured: true
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: "https://github.com/HugoBlox/hugo-blox-builder"
+url_pdf: "/note/q-analog-ra/q-analog.pdf"
+url_code: ""
 url_dataset: ""
 url_poster: ""
 url_project: ""
@@ -64,12 +64,17 @@ projects: []
 slides: example
 ---
 
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
+### Project Description
 
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}}
+This thesis presents a comprehensive mathematical analysis of **Ramsey Theory**, a field of combinatorics studying the conditions under which order must appear in large substructures. Conducted under the supervision of **Prof. Leonid Chekhov**, the research focuses on the determination of Ramsey numbers $R(s,t)$—the minimum graph size ensuring a monochromatic clique of size $s$ or $t$.
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+The work is structured around three key mathematical pillars:
+
+- **Exact Values and Graph Constructions:** The thesis provides step-by-step proofs for known Ramsey numbers, establishing that $R(3,3)=6$, $R(3,4)=9$, $R(3,5)=14$, and $R(4,4)=18$.
+
+  - **Upper Bounds:** Derived using the recurrence $R(s,t) \le R(s-1,t) + R(s,t-1)$[cite: 380].
+  - **Lower Bounds:** Established by constructing explicit "counterexample" graphs (e.g., cyclic graphs based on modulo arithmetic) that avoid monochromatic cliques of the specified sizes[cite: 508, 532].
+
+- **Probabilistic Methods and Asymptotics:** Beyond small integers, the thesis explores the foundational work of Paul Erdős. It details the **Probabilistic Method** to prove the exponential lower bound $R(k,k) > 2^{k/2}$, demonstrating that random edge colorings avoid monochromatic cliques with high probability.
+
+- **Multicolor Extensions:** The scope extends to **Multicolor Ramsey Numbers**, specifically proving that $R_3(3,3,3)=17$. This involves demonstrating that any 3-coloring of a complete graph with 17 vertices must contain a monochromatic triangle.
