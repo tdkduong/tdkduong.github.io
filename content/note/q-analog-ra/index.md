@@ -1,40 +1,38 @@
 ---
-title: "An example journal article"
+title: "An Exploration of q-Analogues and Related Number Systems"
 authors:
   - admin
-  - Robert Ford
 author_notes:
   - "Equal contribution"
-  - "Equal contribution"
-date: "2015-09-01T00:00:00Z"
+date: "2024-12-15T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2025-08-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article-journal"]
+publication_types: ["expository article"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
+publication: ""
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: This project investigates the theory of q-analogues in enumerative combinatorics, focusing on the deformation of classical integer sequences into polynomial generating functions. Key topics include the combinatorial interpretations of Gaussian coefficients, the structural properties of q-Stirling numbers of the first and second kinds, and the p-adic integral representation of Carlitz's q-Bernoulli numbers. The study further covers q-Fibonacci numbers defined by pattern-avoiding partitions and extends the q-Stirling framework to the Coxeter group of Type B (hyperoctahedral group), establishing identities related to elementary and homogeneous symmetric polynomials. This work was conducted under the mentorship of Prof. Peter Magyar.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary:
 
 tags:
-  - Source Themes
+  - Expository Article
 featured: false
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: "https://github.com/HugoBlox/hugo-blox-builder"
+url_pdf: "/note/q-analog-ra/q-analog.pdf"
+url_code: ""
 url_dataset: ""
 url_poster: ""
 url_project: ""
@@ -64,12 +62,11 @@ projects: []
 slides: example
 ---
 
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
+### Project Description: q-analog numbers
 
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}}
+This expository article provides a comprehensive exploration of **q-analogues**, a process of "quantization" that transforms classical counting problems into polynomial frameworks over a parameter $q$. Developed under the guidance of **Prof. Peter Magyar**, the work covers four primary areas of enumerative combinatorics:
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+- **The Gaussian Coefficients:** The paper validates the q-binomial coefficients $[\begin{matrix}n\\ k\end{matrix}]_{q}$ as the central object of the theory. It details their multiple combinatorial interpretations, including the enumeration of $k$-dimensional subspaces in vector spaces over $\mathbb{F}_q$, area generation under lattice paths, and inversion statistics on bit strings.
+- **q-Stirling and q-Bernoulli Numbers:** The project analyzes **Carlitz’s q-Stirling numbers** (Type A) and their relation to **q-Bernoulli numbers**. A key result presented is the **q-Bernoulli-Stirling relation**, proven using p-adic integral representations and q-falling factorial orthogonality.
+- **q-Fibonacci Numbers:** The text explores q-Fibonacci numbers $F_n(q)$ as generating functions for the "right bigger" statistic on **layered matchings** (partitions avoiding patterns $13/2$ and $123$). It includes a combinatorial proof of the q-analog of the convolution identity for $F_{m+n}$.
+- **Type B Extensions:** The scope extends to the hyperoctahedral group (Type B), defining q-analogues for **Type B Stirling numbers**. These are shown to satisfy recurrences involving "q-odd integers" $[2n+1]_q$ and are linked to elementary and homogeneous symmetric polynomials evaluated at q-integers.
