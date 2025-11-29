@@ -28,10 +28,10 @@ tags:
   - Expository Article
 featured: false
 
-# links:
-# - name: ""
-#   url: ""
-url_pdf: "/note/q-analog-ra/q-analog.pdf"
+links:
+  - name: "q-analog"
+    url: "/note/q-analog-ra/q-analog.pdf"
+url_pdf: ""
 url_code: ""
 url_dataset: ""
 url_poster: ""
@@ -62,7 +62,7 @@ projects: []
 slides: example
 ---
 
-### Project Description: q-analog numbers
+### Project Description
 
 This expository article provides a comprehensive exploration of **q-analogues**, a process of "quantization" that transforms classical counting problems into polynomial frameworks over a parameter $q$. Developed under the guidance of **Prof. Peter Magyar**, the work covers four primary areas of enumerative combinatorics:
 

@@ -28,10 +28,10 @@ tags:
   - Expository Article
 featured: false
 
-# links:
-# - name: ""
-#   url: ""
-url_pdf: "/note/random-matrix-model-ra/random-matrix-model.pdf"
+links:
+  - name: "Random Matrix Model"
+    url: "/note/random-matrix-model-ra/random-matrix-model.pdf"
+url_pdf: ""
 url_code: ""
 url_dataset: ""
 url_poster: ""
@@ -62,7 +62,7 @@ projects: []
 slides: example
 ---
 
-### Project Description: The Kontsevich Matrix Model and Virasoro Constraints
+### Project Description
 
 This expository article provides a rigorous examination of the **Kontsevich Matrix Model (KMM)**, detailing its central role in unifying two-dimensional (2D) quantum gravity, integrable systems, and the topology of moduli spaces. The work synthesizes three major mathematical perspectives on the KMM:
 
