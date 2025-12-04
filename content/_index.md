@@ -15,8 +15,8 @@ sections:
       text: ""
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: CV
-        url: uploads/cv.pdf
+        text: CV (Latest)
+        url: uploads/tdkduong-cv.pdf
     design:
       css_class: dark
       background:
