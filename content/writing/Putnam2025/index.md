@@ -56,3 +56,21 @@ $$
 $$
 
 Thus, $\operatorname{Odd}(n_k - m_k)$ form a non-increasing sequence of positive integer, and the equality holds only when for $d_k = 1$. Hence, the sequence must stablize for a $k$ that is great enough (if $k > A$ for some $A$, then $d_k = 1$), thus $2m_{k} + 1$ and $2n_{k} + 1$ are relatively prime for great enough $k$.
+
+## Problem A2
+
+### Statement
+
+Find the largest real number $a$ and the smallest real number $b$ such that
+
+$$
+ax(\pi - x) \leq \sin(x) \leq bx(\pi - x)
+$$
+
+for all $x$ in the interval $[0, \pi]$.
+
+### Solution
+
+Consider function $f(x) = \frac{\sin(x)}{x(\pi - x)}$. Since both numerator and denominator are symmetric about $\frac{\pi}{2}$, then we can the function on the interval $(0,\frac{π}{2}​]$, furthermore we can extend it to $0$ by setting $f(0) = \frac{1}{\pi}$.
+
+Note that, $f'(x) = \frac{g(x)}{x^2(\pi - x)^2}$, where $g(x) = x(\pi − x) \cos(x) − (\pi − 2x)\sin(x)$. In fact, for $x \in (0, \frac{\pi}{2})$, $g(x) > 0$, since we have $g(0) = g(\frac{\pi}{2}) = 0$ and $g'(x) = (x^2 - \pi x + 2)\sin(x)$. The sign of $g'(x)$ depends on $(x^2 - \pi x + 2)$, and we now consider its roots, which are $\frac{\pi \pm \sqrt{\pi^2 - 8}}{2}$. There is only one root in the range, and when $x \in (0, \frac{\pi - \sqrt{\pi^2 - 8}}{2})$, $g'(x) > 0$ and when $x \in (\frac{\pi - \sqrt{\pi^2 - 8}}{2}, \frac{\pi}{2})$, $g'(x) < 0$. Since $g(0) = g(\frac{\pi}{2}) = 0$, we have $g(x) > 0$ when $x \in [0, \frac{\pi}{2}]$. Thus, $f(x)$ is increasing in $[0, \frac{\pi}{2}]$, hence it achieves a minimum at $a = f(0) = \frac{1}{\pi}$ and a maximum at $b = f(\frac{\pi}{2}) = \frac{4}{π^2}$.
