@@ -24,7 +24,7 @@
         </span>
         ({{- $item.Date.Format "2006" -}}).
         <a href="{{ $link }}" {{ $target | safeHTMLAttr }}
-           class="underline transition-colors duration-300 hover:text-primary-500 dark:hover:text-primary-400">
+           class="underline transition-colors duration-300 hover:text-primary-600 dark:hover:text-primary-500">
           {{ $item.Title }}
         </a>.
         {{ if $item.Params.publication_short }}
@@ -40,7 +40,7 @@
           {{ partial "page_metadata_authors" $item }}.
         </span>
         <a href="{{ $link }}" {{ $target | safeHTMLAttr }}
-           class="underline transition-colors duration-300 hover:text-primary-500 dark:hover:text-primary-400">
+           class="underline transition-colors duration-300 hover:text-primary-600 dark:hover:text-primary-500">
           {{ $item.Title }}
         </a>.
         {{ if $item.Params.publication_short }}
